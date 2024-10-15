@@ -1,0 +1,37 @@
+title: Baxi Modbus
+path: baxi-modbus
+cards:
+  - type: vertical-stack
+    cards:
+      - type: conditional
+        conditions:
+          - condition: state
+            entity: sensor.acs_bit_actividad
+            state: "1"
+        card:
+          type: thermostat
+          entity: climate.baxi_acs_eco
+          features:
+            - type: climate-hvac-modes
+          show_current_as_primary: true
+      - type: conditional
+        conditions:
+          - condition: state
+            entity: sensor.acs_bit_actividad
+            state_not: "1"
+        card:
+          type: thermostat
+          entity: climate.baxi_acs_confort
+          show_current_as_primary: true
+          features:
+            - type: climate-hvac-modes
+      - type: entities
+        entities:
+          - entity: sensor.acs_temperatura
+          - entity: sensor.acs_temp_confort
+          - entity: sensor.acs_temp_eco
+  - type: thermostat
+    entity: climate.baxi_aacc
+    features:
+      - type: climate-hvac-modes
+    show_current_as_primary: true
