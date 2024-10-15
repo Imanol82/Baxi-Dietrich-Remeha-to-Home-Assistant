@@ -259,6 +259,9 @@ cards:
       - entity: sensor.acs_temp_eco
 
 ```
+Video to understand 2 climates in one:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/fH2bT5B7qUY/0.jpg)](https://www.youtube.com/watch?v=fH2bT5B7qUY)
 
 Well, I hope this project is useful and I hope to improve it with everyone's help. 
 To be able to do this, I have received a lot of help from the telegram group "Aerothermia España/De Dietrich". 
